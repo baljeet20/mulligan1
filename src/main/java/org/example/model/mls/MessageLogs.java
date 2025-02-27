@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.model.mls;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -6,21 +6,19 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
+@Table(name = "message_logs")
 @Getter
 @Setter
 @NoArgsConstructor
-@Table(name = "sql_logs")
-public class SQLLogs {
+public class MessageLogs {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "description")
-    private String description;
+    @Column(name = "client_code")
+    private String clientCode;
 
-    @OneToOne
-    @MapsId
-    private Event event;
-
+    @Column(name = "payload")
+    private String payload;
 }

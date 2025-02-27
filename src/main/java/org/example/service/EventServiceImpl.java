@@ -1,9 +1,13 @@
 package org.example.service;
 
-import org.example.model.Event;
-import org.example.repository.EventRepository;
+import jakarta.persistence.EntityManager;
+import org.example.model.mulligan.Event;
+import org.example.repository.mulligan.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class EventServiceImpl implements EventService{
@@ -15,4 +19,5 @@ public class EventServiceImpl implements EventService{
     public Event createEvent(Event event) {
         return eventRepository.save(event);
     }
+
 }

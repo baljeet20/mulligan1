@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.model.mulligan;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -9,15 +9,18 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-@Table(name = "replayed_messages")
-public class ReplayedMessages {
+@Table(name = "sql_logs")
+public class SQLLogs {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "message")
-    private String message;
+    @Column(name = "description")
+    private String description;
+
+    @OneToOne
+    @MapsId
+    private Event event;
 
 }
-

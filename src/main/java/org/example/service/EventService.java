@@ -1,7 +1,8 @@
 package org.example.service;
 
-import org.example.model.Event;
-import org.springframework.stereotype.Service;
+import org.example.model.mulligan.Event;
+
+import java.util.List;
 
 public interface EventService {
 

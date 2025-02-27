@@ -1,8 +1,8 @@
 package org.example.service;
 
-import org.example.model.Event;
-import org.example.model.ReplayedMessages;
-import org.example.model.SQLLogs;
+import org.example.model.mulligan.Event;
+import org.example.model.mulligan.ReplayedMessages;
+import org.example.model.mulligan.SQLLogs;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
